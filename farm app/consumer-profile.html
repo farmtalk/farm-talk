@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="images/logoico.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile-Farm Talk</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="profile.css"> <!-- Ensure this path is correct -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="manifest" href="manifest.json">
+    
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then((registration) => console.log('Service Worker registered', registration))
+                .catch((error) => console.log('Service Worker registration failed', error));
+        }
+    </script>
+    </head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Logo" class="logo">
+        <h1>Farm Talk</h1>
+    </header>
+
+    <!-- Navigator Tab -->
+    <nav>
+        <ul>
+            <li><a href="javascript:void(0)" onclick="redirectToFeed()"><i class="fas fa-home"></i> Feed/Home</a></li>
+            <li><a href="javascript:void(0)" onclick="redirectToSearch()"><i class="fas fa-search"></i> Search</a></li>
+            <li><a href="javascript:void(0)" onclick="redirectToCreate()"><i class="fas fa-plus-circle"></i> Create</a></li>
+            <li><a href="javascript:void(0)" onclick="redirectToMessages()"><i class="fas fa-comments"></i> Messages</a></li>
+            <li><a href="javascript:void(0)" onclick="redirectToProfile()"><i class="fas fa-user"></i> Profile</a></li>
+        </ul>
+    </nav>
+
+        <!-- Profile Header Section -->
+        <div class="profile-header">
+            <div class="profile-pic">
+                <img src="images/consumer-pfp.avif" alt="Profile Picture" class="profile-image">
+                <button class="edit-profile-btn" onclick="toggleEditForm()">Edit Profile</button>
+            </div>
+            <div class="profile-info">
+                <h2>Consumer Name</h2>
+                <p>@consumerusername</p>
+                <p class="bio">I am a consumer passionate about sustainability and supporting the growth of fresh, localy sourced produce.</p>
+            </div>
+        </div>
+
+        <!-- Profile Edit Section -->
+        <div class="profile-edit">
+            <div class="dropdown-content" id="edit-form" style="display: none;">
+                <form action="#" method="post" onsubmit="return false;">
+                    <label for="company-name">Name:</label>
+                    <input type="text" id="company-name" name="company-name" value="Company Name"><br>
+
+                    <label for="company-username">Username:</label>
+                    <input type="text" id="company-username" name="company-username" value="@companyusername"><br>
+
+                    <label for="bio">Bio:</label>
+                    <textarea id="bio" name="bio">We're a company focused on sustainable farming practices, providing fresh local produce to communities.</textarea><br>
+
+                    <label for="profile-pic">Profile Picture:</label>
+                    <input type="file" id="profile-pic" name="profile-pic"><br>
+
+                    <button type="submit" onclick="saveChanges()">Save Changes</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Posts and Saved Section -->
+        <div class="posts-container">
+            <div class="posts">
+                <h3>Your Posts</h3>
+                <div class="no-posts">
+                    <p>You don't have any posts yet.</p>
+                </div>
+            </div>
+
+            <div class="saved">
+                <h3>Saved Posts</h3>
+                <div class="no-saved">
+                    <p>You haven't saved any posts yet.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Farm Talk. All Rights Reserved.</p>
+    </footer>
+
+    
+    <script>
+      // Toggle the visibility of the edit profile form
+      function toggleEditForm() {
+            const form = document.getElementById("edit-form");
+            form.style.display = form.style.display === "block" ? "none" : "block";
+        }
+
+        // Save changes and update profile info
+        function saveChanges() {
+            // Get updated values from the form
+            const name = document.getElementById("company-name").value;
+            const username = document.getElementById("company-username").value;
+            const bio = document.getElementById("bio").value;
+
+            // Update the profile display with new values
+            document.getElementById("display-name").textContent = name;
+            document.getElementById("display-username").textContent = username;
+            document.getElementById("display-bio").textContent = bio;
+
+            // Close the form after saving changes
+            toggleEditForm();
+
+            // Optionally, alert to show that changes were saved
+            alert("Changes saved successfully!");
+        }
+
+        // Navigation functions (these should redirect to actual pages in your app)
+        function redirectToFeed() {
+            window.location.href = "consumer-feed.html";
+        }
+
+        function redirectToSearch() {
+            window.location.href = "consumer-search.html";
+        }
+
+        function redirectToCreate() {
+            window.location.href = "consumer-create.html";
+        }
+
+        function redirectToMessages() {
+            window.location.href = "consumer-messages.html";
+        }
+
+        function redirectToProfile() {
+            window.location.href = "consumer-profile.html";
+        }
+    </script>
+</body>
+</html>

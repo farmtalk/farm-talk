@@ -1,0 +1,233 @@
+/* Global Styles */
+body {
+    font-family: 'Merienda', cursive; /* Fun and welcoming font */
+    margin: 0;  /* Remove any margin */
+    padding: 0; /* Remove any padding */
+    background: linear-gradient(to bottom right, #f5fee9, #f7f2e7);
+    color: #4c3f26; /* Dark brown for text */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+    width: 100%;  /* Make sure the body takes up the full width */
+    height: 100%;
+}
+
+/* Banner Styles */
+.banner {
+    width: 120%;
+    height: 350px;
+    background-image: url('images/famer2.jfif'); /* Banner image */
+    background-size: cover;  /* Ensure the image covers the entire space */
+    background-position: center;  /* Center the image */
+    position: relative;
+    z-index: 1;
+    margin: 0;  /* Ensure no margin around the image */
+    padding: 0; /* Remove padding */
+}
+
+/* Banner Text */
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
+
+.banner h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.banner p {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-top: 10px;
+}
+
+/* Form Container Styles */
+.form-container {
+    padding: 20px 30px;
+    width: 100%;
+    max-width: 800px;
+    margin: 50px auto 0;  /* Ensure the form is centered with some space at the top */
+    text-align: left;
+}
+
+/* Form Fields */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #6c4f1a; /* Dark brown for labels */
+    margin-bottom: 8px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 2px solid #8f9b58; /* Earthy greenish border */
+    background-color: #f4f4f4; /* Light gray background for inputs */
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+input:focus, select:focus {
+    border-color: #7a6a56;
+    outline: none;
+    box-shadow: 0 0 5px rgba(122, 106, 86, 0.5);
+}
+
+/* Style for Multiple Choice */
+.multiple-choice {
+    display: flex;
+    flex-direction: column;  /* Stack items vertically */
+    gap: 10px;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+/* Style for each choice */
+.choice {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 8px 15px;
+    border: 2px solid #8f9b58;
+    border-radius: 6px;
+    background-color: #f4f4f4;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    width: 100%;
+    max-width: 300px;  /* Set a max width for the choices */
+}
+
+.choice input[type="radio"] {
+    display: none; /* Hide the radio button */
+}
+
+.choice .checkmark {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #8f9b58;
+    margin-right: 10px;
+    background-color: white;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.choice input[type="radio"]:checked + .checkmark {
+    background-color: #8f9b58; /* Earthy green when checked */
+}
+
+.choice-text {
+    margin-left: 10px;  /* Space between checkbox and text */
+}
+
+.choice:hover {
+    background-color: #d2d7a1; /* Light yellow-green background on hover */
+    border-color: #7a6a56; /* Darker border on hover */
+}
+
+.choice:hover .checkmark {
+    background-color: #7a6a56; /* Darker background on hover */
+}
+
+
+/* Submit Button */
+.submit-btn {
+    background-color: #7a6a56;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Make button take full width */
+}
+
+.submit-btn:hover {
+    background-color: #4c3f26; /* Darker earthy tone for hover */
+}
+
+/* Mandatory Field Indicator */
+.mandatory {
+    color: #e74c3c; /* Red color for mandatory fields */
+}
+
+/* Page Layout and Alignment */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 15px;
+}
+
+/* Form input field styles */
+input, select {
+    font-family: 'Merienda', cursive;
+    padding: 10px;
+    border-radius: 6px;
+    border: 2px solid #8e8e3f;
+    background-color: #f4f4f4;
+    width: 100%;
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+input:focus, select:focus {
+    border-color: #6e6e39;
+    outline: none;
+    box-shadow: 0 0 5px rgba(122, 106, 86, 0.5);
+}
+
+/* Submit Button */
+.submit-btn {
+    background-color: #5c5c37;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    margin-top: 20px;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #7a6a56; /* Dark earthy tone for hover effect */
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .banner h1 {
+        font-size: 2.5rem;
+    }
+
+    .banner p {
+        font-size: 1rem;
+    }
+
+    .form-container {
+        width: 100%;
+        padding: 20px;
+    }
+}

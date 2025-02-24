@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="images/logoico.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages - Farm Talk</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="messages.css"> <!-- Ensure this path is correct -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="manifest" href="manifest.json">
+    
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then((registration) => console.log('Service Worker registered', registration))
+                .catch((error) => console.log('Service Worker registration failed', error));
+        }
+    </script>
+    
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <img src="images/logo.png" alt="Logo" class="logo">
+        <h1>Farm Talk</h1>
+    </header>
+
+    <!-- Navigator Tab -->
+    <nav>
+        <ul>
+            <li><a href="javascript:void(0)" onclick="redirectToFeed()"><i class="fas fa-home"></i> Feed/Home</a></li>
+            <li><a href="javascript:void(0)" onclick="redirectToSearch()"><i class="fas fa-search"></i> Search</a></li>
+            <li><a href="javascript:void(0)" onclick="redirectToCreate()"><i class="fas fa-plus-circle"></i> Create</a></li>
+            <li><a href="javascript:void(0)" onclick="redirectToMessages()"><i class="fas fa-comments"></i> Messages</a></li>
+            <li><a href="javascript:void(0)" onclick="redirectToProfile()"><i class="fas fa-user"></i> Profile</a></li>
+        </ul>
+    </nav>
+
+    <!-- Messages Area -->
+    <main class="messages-area">
+        <header>
+            <h2>Your Messages</h2>
+            <div class="search-container">
+                <input type="text" id="search" placeholder="Search Messages...">
+            </div>
+        </header>
+
+        <!-- Message List -->
+        <section class="message-list">
+            <div class="message-item">
+                <div class="message-header">
+                    <span class="sender">Tom's Farm (Farmer)</span>
+                    <span class="timestamp">10:30 AM</span>
+                    <button class="open-message-btn" onclick="openMessage('Tom\'s Farm', '10:30 AM', 'We are looking for funding and partnerships for our sustainable farming projects. Would you be interested in collaborating?')">Open Message</button>
+                </div>
+                <p class="message-content">We are looking for funding and partnerships for our sustainable farming projects. Would you be interested in collaborating?</p>
+            </div>
+            <div class="message-item">
+                <div class="message-header">
+                    <span class="sender">Green Fields</span>
+                    <span class="timestamp">9:15 AM</span>
+                    <button class="open-message-btn" onclick="openMessage('Green Fields', '9:15 AM', 'We have fresh organic produce ready for sale. Would you be interested in purchasing?')">Open Message</button>
+                </div>
+                <p class="message-content">We have fresh organic produce ready for sale. Would you be interested in purchasing?</p>
+            </div>
+            <!-- More messages can be added here -->
+        </section>
+
+        <!-- Message Box -->
+        <section class="message-box">
+            <h3>Send New Message</h3>
+            <form action="#" method="post" onsubmit="return false;">
+                <label for="recipient">To:</label>
+                <select id="recipient" name="recipient" class="message-select">
+                    <option value="Tom's Farm">Tom's Farm (Farmer)</option>
+                    <option value="Green Fields">Green Fields</option>
+                    <option value="Sustainability Co">Sustainability Co</option>
+                    <!-- More recipients can be added here -->
+                </select><br>
+
+                <label for="message-content">Message:</label>
+                <textarea id="message-content" name="message-content" placeholder="Type your message..."></textarea><br>
+
+                <button class="send-button" type="submit" onclick="sendMessage()">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Farm Talk. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Function to open individual messages
+        function openMessage(sender, timestamp, content) {
+            alert('Message from: ' + sender + '\n' + 'Sent at: ' + timestamp + '\n' + 'Content: ' + content);
+        }
+
+        // Function to handle sending a message
+        function sendMessage() {
+            const recipient = document.getElementById("recipient").value;
+            const messageContent = document.getElementById("message-content").value;
+
+            if (messageContent.trim() !== "") {
+                alert("Message sent to " + recipient + ":\n" + messageContent);
+                // Clear the form after sending
+                document.getElementById("recipient").value = "";
+                document.getElementById("message-content").value = "";
+            } else {
+                alert("Please enter a message before sending.");
+            }
+        }
+
+        // Navigation functions (these should redirect to actual pages in your app)
+        function redirectToFeed() {
+            window.location.href = "company-feed.html";
+        }
+
+        function redirectToSearch() {
+            window.location.href = "company-search.html";
+        }
+
+        function redirectToCreate() {
+            window.location.href = "company-create.html";
+        }
+
+        function redirectToMessages() {
+            window.location.href = "company-messages.html";
+        }
+
+        function redirectToProfile() {
+            window.location.href = "company-profile.html";
+        }
+    </script>
+</body>
+</html>

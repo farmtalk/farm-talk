@@ -1,0 +1,190 @@
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: 'Merienda', sans-serif;
+    background-color: #f9f8f2;
+    color: #3b3b3b;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Logo and header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 36px;
+    color: #3b3b3b;
+    margin-top: 10px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+/* Navigator Tab */
+nav {
+    background-color: #658354;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 5px 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #b8d9ab;
+}
+
+/* Responsive Navigation */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+}
+
+/* Search Bar */
+.search-container {
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+#search {
+    padding: 12px;
+    width: 50%;
+    border-radius: 20px;
+    border: 1px solid #658354;
+    font-size: 16px;
+    text-align: center;
+}
+
+.search-btn {
+    background-color: #658354;
+    color: #fff;
+    border: none;
+    padding: 14px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 25px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+.search-btn:hover {
+    background-color: #506e3b;
+}
+
+/* All Categories Dropdown */
+.category-dropdown {
+    padding: 14px 25px;
+    border-radius: 25px;
+    border: none;
+    font-size: 18px;
+    font-family: 'EB Garamond', serif;
+    background-color: #658354;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+.category-dropdown:hover {
+    background-color: #506e3b;
+}
+
+/* Search Results */
+.results {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 20px;
+}
+
+.result-item {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.result-item img {
+    width: 80%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.result-item h2 {
+    font-size: 22px;
+    color: #3b3b3b;
+    margin-bottom: 15px;
+}
+
+.result-item p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.view-btn {
+    background-color: #658354;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.view-btn:hover {
+    background-color: #506e3b;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 14px;
+    color: #888;
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="images/logoico.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainability Company Sign-Up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="company-signup.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="manifest" href="manifest.json">
+    
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then((registration) => console.log('Service Worker registered', registration))
+                .catch((error) => console.log('Service Worker registration failed', error));
+        }
+    </script>    
+</head>
+<body>
+
+    <!-- Sustainability Company Banner Section -->
+    <div class="banner">
+        <div class="banner-text">
+            <h1>Sustainability Company Sign-Up</h1>
+            <p>Partner with farmers to supply resources, collaborate on projects, and grow your agricultural network.</p>
+        </div>
+    </div>
+
+    <!-- Form Container -->
+    <div class="form-container">
+        <form id="signup-form">
+          <!-- Company Name -->
+          <div class="form-container">
+            <label for="company-name">Company Name:<span class="mandatory">*</span></label>
+            <input type="text" id="company-name" name="company-name" required>
+          </div>
+
+          <!-- Main Products or Services -->
+          <div class="form-container">
+            <label for="services">Main products or services:<span class="mandatory">*</span></label>
+            <div class="multiple-choice">
+                <label class="choice">
+                    <input type="checkbox" name="services" value="seeds-fertilizers"> <span class="checkmark"></span>
+                    <span class="choice-text">Seeds and fertilizers</span>
+                </label>
+                <label class="choice">
+                    <input type="checkbox" name="services" value="machinery"> <span class="checkmark"></span>
+                    <span class="choice-text">Agricultural machinery and equipment</span>
+                </label>
+                <label class="choice">
+                    <input type="checkbox" name="services" value="supply-chain"> <span class="checkmark"></span>
+                    <span class="choice-text">Supply chain and logistics</span>
+                </label>
+                <label class="choice">
+                    <input type="checkbox" name="services" value="research-development"> <span class="checkmark"></span>
+                    <span class="choice-text">Research and development</span>
+                </label>
+                <label class="choice">
+                    <input type="checkbox" name="services" value="financial-services"> <span class="checkmark"></span>
+                    <span class="choice-text">Financial services or insurance</span>
+                </label>
+                <label class="choice">
+                    <input type="checkbox" name="services" value="other-services"> <span class="checkmark"></span>
+                    <span class="choice-text">Other</span>
+                </label>
+            </div>
+          </div>
+
+          <!-- Primary Aim in Working with Farmers -->
+          <div class="form-container">
+            <label for="primary-aim">Primary aim in working with farmers:<span class="mandatory">*</span></label>
+            <div class="multiple-choice">
+                <label class="choice">
+                    <input type="checkbox" name="primary-aim" value="crop-yield"> <span class="checkmark"></span>
+                    <span class="choice-text">Improving crop yield</span>
+                </label>
+                <label class="choice">
+                    <input type="checkbox" name="primary-aim" value="supply-chain-efficiency"> <span class="checkmark"></span>
+                    <span class="choice-text">Enhancing supply chain efficiency</span>
+                </label>
+                <label class="choice">
+                    <input type="checkbox" name="primary-aim" value="financial-solutions"> <span class="checkmark"></span>
+                    <span class="choice-text">Providing financial or insurance solutions</span>
+                </label>
+                <label class="choice">
+                    <input type="checkbox" name="primary-aim" value="training-development"> <span class="checkmark"></span>
+                    <span class="choice-text">Offering training and development</span>
+                </label>
+                <label class="choice">
+                    <input type="checkbox" name="primary-aim" value="research-innovation"> <span class="checkmark"></span>
+                    <span class="choice-text">Research and innovation</span>
+                </label>
+                <label class="choice">
+                    <input type="checkbox" name="primary-aim" value="other-aim"> <span class="checkmark"></span>
+                    <span class="choice-text">Other</span>
+                </label>
+            </div>
+          </div>
+
+          <!-- Interest in Providing Training/Resources -->
+          <div class="form-group">
+              <label>Interest in providing training/resources to farmers?<span class="mandatory">*</span></label>
+              <div class="button-group">
+                  <button type="button" class="choice-btn" onclick="selectOption('yes')">Yes</button>
+                  <button type="button" class="choice-btn" onclick="selectOption('no')">No</button>
+                  <button type="button" class="choice-btn" onclick="selectOption('maybe')">Maybe</button>
+              </div>
+              <input type="hidden" id="training-resources" name="training-resources">
+          </div>
+
+          <!-- Regions or Countries of Operation -->
+          <div class="form-container">
+            <label for="regions">Regions or countries of operation:<span class="mandatory">*</span></label>
+            <input type="text" id="regions" name="regions" required>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="submit-btn">Sign Up</button>
+        </form>
+    </div>
+
+    <!-- JavaScript for Form Submission -->
+    <script>
+        document.getElementById("signup-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+            
+            // Redirect to the company feed page
+            window.location.href = "company-feed.html";
+        });
+    </script>
+
+</body>
+</html>

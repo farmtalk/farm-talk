@@ -1,0 +1,169 @@
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: 'Merienda', sans-serif;
+    background-color: #f9f8f2;
+    color: #3b3b3b;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Header and logo */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 36px;
+    color: #3b3b3b;
+    margin-top: 10px;
+}
+
+.logo {
+    max-width: 80px; /* Keeps it responsive */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 50%;
+}
+
+@media (max-width: 480px) {
+    .logo {
+        max-width: 60px; /* Smaller size for very small screens */
+    }
+}
+
+/* Navigator Tab */
+nav {
+    background-color: #658354;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 5px 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #b8d9ab;
+}
+
+/* Responsive Navigation */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+}
+
+
+/* Responsive Navigation */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+}
+
+/* Create Post Area */
+.create-post-area {
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.create-post-area header h2 {
+    font-size: 28px;
+    color: #3b3b3b;
+    margin-bottom: 10px;
+}
+
+.create-post-area header p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Post Creation Form */
+.create-post-form {
+    margin-top: 20px;
+}
+
+.create-post-form label {
+    display: block;
+    font-size: 16px;
+    color: #3b3b3b;
+    margin-bottom: 8px;
+}
+
+.create-post-form input, .create-post-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #658354;
+    font-size: 16px;
+}
+
+.create-post-form input[type="file"] {
+    border: none;
+}
+
+.create-post-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Submit Button */
+.create-post-btn {
+    background-color: #658354;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.create-post-btn:hover {
+    background-color: #506e3b;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 14px;
+    color: #888;
+}

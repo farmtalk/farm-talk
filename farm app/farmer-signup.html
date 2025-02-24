@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="images/logoico.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Sign-Up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="farmer-signup.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="manifest" href="manifest.json">
+    
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then((registration) => console.log('Service Worker registered', registration))
+                .catch((error) => console.log('Service Worker registration failed', error));
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Farmer Banner Section -->
+    <div class="banner">
+        <div class="banner-text">
+            <h1>Farmer Sign-Up</h1>
+            <p>Connect with consumers and companies to sell your crops easily and grow your agricultural business.</p>
+        </div>
+    </div>
+
+    <!-- Form Container -->
+    <div class="form-container">
+        <form id="farmer-signup-form">
+            <!-- Farm Location -->
+            <div class="form-group">
+                <label for="farm-location">Farm Location<span class="mandatory">*</span></label>
+                <input type="text" id="farm-location" name="farm-location" placeholder="Enter your farm's location" required>
+            </div>
+
+            <!-- Farm Name -->
+            <div class="form-group">
+                <label for="farm-name">Farm Name<span class="mandatory">*</span></label>
+                <input type="text" id="farm-name" name="farm-name" placeholder="Enter your farm's name" required>
+            </div>
+
+            <!-- What do you sell? -->
+            <div class="form-group">
+                <label>What do you sell?<span class="mandatory">*</span></label>
+                <div class="multiple-choice">
+                    <label class="choice">
+                        <input type="radio" name="sell-type" value="fruit" required>
+                        <span class="checkmark"></span>
+                        Fruit
+                    </label>
+                    <label class="choice">
+                        <input type="radio" name="sell-type" value="vegetables" required>
+                        <span class="checkmark"></span>
+                        Vegetables
+                    </label>
+                    <label class="choice">
+                        <input type="radio" name="sell-type" value="flowers" required>
+                        <span class="checkmark"></span>
+                        Flowers and Plants
+                    </label>
+                    <label class="choice">
+                        <input type="radio" name="sell-type" value="crops" required>
+                        <span class="checkmark"></span>
+                        Crops and Grains
+                    </label>
+                    <label class="choice">
+                        <input type="radio" name="sell-type" value="dairy" required>
+                        <span class="checkmark"></span>
+                        Dairy
+                    </label>
+                    <label class="choice">
+                        <input type="radio" name="sell-type" value="seeds" required>
+                        <span class="checkmark"></span>
+                        Seeds
+                    </label>
+                    <label class="choice">
+                        <input type="radio" name="sell-type" value="herbs" required>
+                        <span class="checkmark"></span>
+                        Herbs and Spices
+                    </label>
+                </div>
+            </div>
+
+            <!-- Farm Size -->
+            <div class="form-group">
+                <label for="farm-size">Farm size (in acres/hectares)<span class="mandatory">*</span></label>
+                <input type="text" id="farm-size" name="farm-size" placeholder="Enter farm size in acres or hectares" required>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Complete Sign-Up</button>
+        </form>
+    </div>
+
+    <script>
+        // Redirect user to the farmer feed page after sign-up
+        document.getElementById('farmer-signup-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            
+            // Optionally: Validate the form or process data here
+            
+            // Redirect to farmer feed page
+            window.location.href = 'farmer-feed.html'; // Update with your actual farmer feed page URL
+        });
+    </script>
+
+</body>
+</html>

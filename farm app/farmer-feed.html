@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="images/logoico.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Talk - Feed</title>
+    <link rel="stylesheet" href="feed.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="manifest" href="manifest.json">
+    
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then((registration) => console.log('Service Worker registered', registration))
+                .catch((error) => console.log('Service Worker registration failed', error));
+        }
+    </script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Updated CDN -->
+    <script>
+        // JavaScript to handle the navigator icon click functionality
+        function redirectToFeed() {
+            window.location.href = 'farmer-feed.html'; // Adjust to the correct path for the feed page
+        }
+
+        function redirectToSearch() {
+            window.location.href = 'farmer-search.html'; // Adjust to the correct path for the search page
+        }
+
+        function redirectToCreate() {
+            window.location.href = 'farmer-create.html'; // Adjust to the correct path for the create page
+        }
+
+        function redirectToMessages() {
+            window.location.href = 'farmer-messages.html'; // Adjust to the correct path for the messages page
+        }
+
+        function redirectToProfile() {
+            window.location.href = 'farmer-profile.html'; // Adjust to the correct path for the profile page
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Logo and Name -->
+    <header>
+        <img src="images/logo.png" alt="Farm Talk Logo" class="logo">
+        <h1>Farm Talk</h1>
+    </header>
+
+    <!-- Navigator Tab -->
+    <nav>
+        <ul>
+            <li><a href="javascript:void(0)" onclick="redirectToFeed()"><i class="fas fa-home"></i> Feed/Home</a></li>
+            <li><a href="javascript:void(0)" onclick="redirectToSearch()"><i class="fas fa-search"></i> Search</a></li>
+            <li><a href="javascript:void(0)" onclick="redirectToCreate()"><i class="fas fa-plus-circle"></i> Create</a></li>
+            <li><a href="javascript:void(0)" onclick="redirectToMessages()"><i class="fas fa-comments"></i> Messages</a></li>
+            <li><a href="javascript:void(0)" onclick="redirectToProfile()"><i class="fas fa-user"></i> Profile</a></li>
+        </ul>
+    </nav>
+
+    <!-- Feed Content -->
+    <main class="feed">
+        <!-- Renting Land -->
+        <section class="feed-item">
+            <h2>Land for Rent</h2>
+            <img src="images/6.png" alt="Land for Rent">
+            <p>Looking for a farm space? We have 5 acres of prime agricultural land available for rent in the countryside. Great for crop production or livestock.</p>
+            <p><strong>Price:</strong> $500 per month</p>
+            <button class="contact-btn">Contact Now</button>
+        </section>
+
+        <!-- Selling Equipment -->
+        <section class="feed-item">
+            <h2>Tractor for Sale</h2>
+            <img src="images/3.png" alt="Tractor for Sale">
+            <p>Buy a high-power tractor for your farming needs! We offer well-maintained equipment that will make your farming tasks easier and more efficient.</p>
+            <p><strong>Price:</strong> $15,000</p>
+            <button class="contact-btn">Contact Now</button>
+        </section>
+
+        <!-- Collaboration Opportunity -->
+        <section class="feed-item">
+            <h2>Collaboration Opportunity: Crop Sharing</h2>
+            <img src="images/farmer3.jpg" alt="Collaboration Opportunity">
+            <p>Seeking farmers interested in collaborating on growing organic crops! Share resources, land, and labor to produce high-quality products.</p>
+            <button class="contact-btn">Contact for Collaboration</button>
+        </section>
+
+        <!-- Farming Tips -->
+        <section class="feed-item">
+            <h2>Farming Tip: Organic Pest Control</h2>
+            <p>Check out our new guide on how to manage pests organically without harmful chemicals. Keep your crops healthy and safe for consumers!</p>
+            <button class="more-btn">Learn More</button>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Farm Talk. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="images/logoico.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Talk - Company Search</title>
+    <link rel="stylesheet" href="search.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merienda&family=EB+Garamond&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="manifest" href="manifest.json">
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js')
+            .then((registration) => console.log('Service Worker registered', registration))
+            .catch((error) => console.log('Service Worker registration failed', error));
+    }
+</script>
+    <script>
+        function redirectToFeed() {
+            window.location.href = 'company-feed.html';
+        }
+
+        function redirectToSearch() {
+            window.location.href = 'company-search.html';
+        }
+
+        function redirectToCreate() {
+            window.location.href = 'company-create.html';
+        }
+
+        function redirectToMessages() {
+            window.location.href = 'company-messages.html';
+        }
+
+        function redirectToProfile() {
+            window.location.href = 'company-profile.html';
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Logo and Name -->
+    <header>
+        <img src="images/logo.png" alt="Farm Talk Logo" class="logo">
+        <h1>Farm Talk</h1>
+    </header>
+
+    <!-- Navigator Tab -->
+    <nav>
+        <ul>
+            <li><a href="javascript:void(0)" onclick="redirectToFeed()"><i class="fas fa-home"></i> Feed/Home</a></li>
+            <li><a href="javascript:void(0)" onclick="redirectToSearch()"><i class="fas fa-search"></i> Search</a></li>
+            <li><a href="javascript:void(0)" onclick="redirectToCreate()"><i class="fas fa-plus-circle"></i> Create</a></li>
+            <li><a href="javascript:void(0)" onclick="redirectToMessages()"><i class="fas fa-comments"></i> Messages</a></li>
+            <li><a href="javascript:void(0)" onclick="redirectToProfile()"><i class="fas fa-user"></i> Profile</a></li>
+        </ul>
+    </nav>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <select class="category-dropdown">
+            <option>All Categories</option>
+            <option>Organic Produce</option>
+            <option>Farming Equipment</option>
+            <option>Sustainability Solutions</option>
+            <option>Partnerships</option>
+        </select>
+        <input type="text" id="search" placeholder="Search for products, farmers, or partnerships...">
+        <button class="search-btn">Search</button>
+    </div>
+
+    <!-- Search Results -->
+    <main class="results">
+        <section class="result-item">
+            <img src="images/wheat.jpg" alt="Organic Wheat">
+            <h2>Organic Wheat for Sale</h2>
+            <p>Premium quality wheat sourced from local farms. Perfect for sustainable food production.</p>
+            <button class="view-btn">View Details</button>
+        </section>
+
+        <section class="result-item">
+            <img src="images/collaboration.webp" alt="Sustainable Farming">
+            <h2>Collaboration Opportunity</h2>
+            <p>Join our initiative to promote eco-friendly farming techniques.</p>
+            <button class="view-btn">Learn More</button>
+        </section>
+
+        <section class="result-item">
+            <img src="images/fruit.webp" alt="Fresh Produce">
+            <h2>Sourcing Fresh Produce</h2>
+            <p>Looking for farmers to supply fresh organic fruits and vegetables.</p>
+            <button class="view-btn">Contact Us</button>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Farm Talk. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

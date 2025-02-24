@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="images/logoico.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post - Farm Talk</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="create.css"> <!-- Ensure this path is correct -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="manifest" href="manifest.json">
+    
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then((registration) => console.log('Service Worker registered', registration))
+                .catch((error) => console.log('Service Worker registration failed', error));
+        }
+    </script>
+    
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <img src="images/logo.png" alt="Logo" class="logo">
+        <h1>Farm Talk</h1>
+    </header>
+
+    <!-- Navigator Tab -->
+    <nav>
+        <ul>
+            <li><a href="javascript:void(0)" onclick="redirectToFeed()"><i class="fas fa-home"></i> Feed/Home</a></li>
+            <li><a href="javascript:void(0)" onclick="redirectToSearch()"><i class="fas fa-search"></i> Search</a></li>
+            <li><a href="javascript:void(0)" onclick="redirectToCreate()"><i class="fas fa-plus-circle"></i> Create</a></li>
+            <li><a href="javascript:void(0)" onclick="redirectToMessages()"><i class="fas fa-comments"></i> Messages</a></li>
+            <li><a href="javascript:void(0)" onclick="redirectToProfile()"><i class="fas fa-user"></i> Profile</a></li>
+        </ul>
+    </nav>
+
+    <!-- Create Post Area -->
+    <main class="create-post-area">
+        <header>
+            <h2>Create a Post</h2>
+            <p>Share your updates, photos, and messages with the Farm Talk community.</p>
+        </header>
+
+        <!-- Post Creation Form -->
+        <section class="create-post-form">
+            <form action="#" method="post" onsubmit="return false;">
+                <label for="post-title">Title:</label>
+                <input type="text" id="post-title" name="post-title" placeholder="Enter your post title..." required><br>
+
+                <label for="post-content">Content:</label>
+                <textarea id="post-content" name="post-content" placeholder="Write your post content..." required></textarea><br>
+
+                <label for="post-image">Post Image:</label>
+                <input type="file" id="post-image" name="post-image"><br>
+
+                <button class="create-post-btn" type="submit" onclick="submitPost()">Post</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Farm Talk. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Function to handle post creation
+        function submitPost() {
+            const title = document.getElementById("post-title").value;
+            const content = document.getElementById("post-content").value;
+            const image = document.getElementById("post-image").files[0];
+
+            if (title.trim() !== "" && content.trim() !== "") {
+                alert("Post created successfully!\nTitle: " + title + "\nContent: " + content);
+                // Optionally, upload the image and save the post data here
+
+                // Clear the form after submitting
+                document.getElementById("post-title").value = "";
+                document.getElementById("post-content").value = "";
+                document.getElementById("post-image").value = "";
+            } else {
+                alert("Please fill out the title and content fields.");
+            }
+        }
+
+        // Navigation functions (these should redirect to actual pages in your app)
+        function redirectToFeed() {
+            window.location.href = "consumer-feed.html";
+        }
+
+        function redirectToSearch() {
+            window.location.href = "consumer-search.html";
+        }
+
+        function redirectToCreate() {
+            window.location.href = "consumer-create.html";
+        }
+
+        function redirectToMessages() {
+            window.location.href = "consumer-messages.html";
+        }
+
+        function redirectToProfile() {
+            window.location.href = "consumer-profile.html";
+        }
+    </script>
+</body>
+</html>

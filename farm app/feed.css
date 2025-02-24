@@ -1,0 +1,174 @@
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: 'Merienda', sans-serif;
+    background-color: #f9f8f2;
+    color: #3b3b3b;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Logo and header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 36px;
+    color: #3b3b3b;
+    margin-top: 10px;
+}
+
+.logo {
+    max-width: 80px; /* Keeps it responsive */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 50%;
+}
+
+@media (max-width: 480px) {
+    .logo {
+        max-width: 60px; /* Smaller size for very small screens */
+    }
+}
+
+/* Navigator Tab */
+nav {
+    background-color: #658354;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none; /* Removes bullet points */
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    justify-content: center;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    margin: 5px 15px; /* Adjust spacing */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #b8d9ab;
+}
+
+/* Responsive Navigation */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+}
+
+/* Search Bar */
+.search-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#search {
+    padding: 10px;
+    width: 60%;
+    border-radius: 5px;
+    border: 1px solid #658354;
+    font-size: 16px;
+}
+
+@media (max-width: 600px) {
+    #search {
+        width: 80%; /* Adjust width for smaller screens */
+    }
+}
+
+/* Feed Content */
+.feed {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.feed-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.feed-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.feed-item h2 {
+    font-size: 24px;
+    color: #3b3b3b;
+    margin-bottom: 10px;
+}
+
+.feed-item p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.contact-btn, .more-btn, .buy-btn {
+    background-color: #658354;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.contact-btn:hover, .more-btn:hover {
+    background-color: #506e3b;
+}
+
+/* Responsive Feed */
+@media (max-width: 768px) {
+    .feed {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust column size */
+    }
+}
+
+@media (max-width: 480px) {
+    .feed {
+        grid-template-columns: 1fr; /* Single column for very small screens */
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 14px;
+    color: #888;
+}

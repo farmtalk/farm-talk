@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="images/logoico.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Talk - Farmer Search</title>
+    <link rel="stylesheet" href="search.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merienda&family=EB+Garamond&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="manifest" href="manifest.json">
+        
+        <script>
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then((registration) => console.log('Service Worker registered', registration))
+                    .catch((error) => console.log('Service Worker registration failed', error));
+            }
+        </script>
+   <script>
+        function redirectToFeed() {
+            window.location.href = 'farmer-feed.html';
+        }
+
+        function redirectToSearch() {
+            window.location.href = 'farmer-search.html';
+        }
+
+        function redirectToCreate() {
+            window.location.href = 'farmer-create.html';
+        }
+
+        function redirectToMessages() {
+            window.location.href = 'farmer-messages.html';
+        }
+
+        function redirectToProfile() {
+            window.location.href = 'farmer-profile.html';
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Logo and Name -->
+    <header>
+        <img src="images/logo.png" alt="Farm Talk Logo" class="logo">
+        <h1>Farm Talk</h1>
+    </header>
+
+    <!-- Navigator Tab -->
+    <nav>
+        <ul>
+            <li><a href="javascript:void(0)" onclick="redirectToFeed()"><i class="fas fa-home"></i> Feed/Home</a></li>
+            <li><a href="javascript:void(0)" onclick="redirectToSearch()"><i class="fas fa-search"></i> Search</a></li>
+            <li><a href="javascript:void(0)" onclick="redirectToCreate()"><i class="fas fa-plus-circle"></i> Create</a></li>
+            <li><a href="javascript:void(0)" onclick="redirectToMessages()"><i class="fas fa-comments"></i> Messages</a></li>
+            <li><a href="javascript:void(0)" onclick="redirectToProfile()"><i class="fas fa-user"></i> Profile</a></li>
+        </ul>
+    </nav>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <select class="category-dropdown">
+            <option>All Categories</option>
+            <option>Seeds & Crops</option>
+            <option>Farming Equipment</option>
+            <option>Land for Lease</option>
+            <option>Community Support</option>
+        </select>
+        <input type="text" id="search" placeholder="Search for buyers, equipment, or partnerships...">
+        <button class="search-btn">Search</button>
+    </div>
+
+    <!-- Search Results -->
+    <main class="results">
+        <section class="result-item">
+            <img src="images/3.png" alt="Tractor for Sale">
+            <h2>Tractor for Sale</h2>
+            <p>Well-maintained, high-power tractor available. Perfect for all farming needs.</p>
+            <button class="view-btn">View Details</button>
+        </section>
+
+        <section class="result-item">
+            <img src="images/Pest.jpg" alt="Farming Grants">
+            <h2>Farming Tips</h2>
+            <p>Apply for funding to support sustainable and innovative farming practices.</p>
+            <button class="view-btn">Learn More</button>
+        </section>
+
+        <section class="result-item">
+            <img src="images/6.png" alt="Looking for Buyers">
+            <h2>Land for Rent</h2>
+            <p>5 acres of prime agricultural land, ideal for crops or livestock.</p>
+            <button class="view-btn">Contact Us</button>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Farm Talk. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

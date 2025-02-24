@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="images/logoico.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="signup-container">
+        <h1>Join Farm Talk</h1>
+        <p class="intro-text">Create an account to connect with farmers, consumers, and sustainability companies for a greener future.</p>
+        <!-- Added id="signup-form" to the form element -->
+        <form id="signup-form" action="#" method="POST">
+            <div class="form-group">
+                <label for="username">Username <span class="mandatory">*</span></label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email-phone">Email or Phone Number <span class="mandatory">*</span></label>
+                <input type="text" id="email-phone" name="email-phone" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password <span class="mandatory">*</span></label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password <span class="mandatory">*</span></label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <div class="form-group">
+                <label for="role">Select Role <span class="mandatory">*</span></label>
+                <select id="role" name="role" required>
+                    <option value="" disabled selected>Please select a role</option> <!-- Default "Please select" option -->
+                    <option value="consumer">Consumer</option>
+                    <option value="farmer">Farmer</option>
+                    <option value="sustainability-company">Sustainability Company</option>
+                </select>
+            </div>            
+            <button type="submit" class="submit-btn">Sign Up</button>
+        </form>
+    </div>
+    <script src="script.js"></script> <!-- Adjust path if necessary -->
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="images/logoico.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Talk - Feed</title>
+    <link rel="stylesheet" href="feed.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="manifest" href="manifest.json">
+    
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then((registration) => console.log('Service Worker registered', registration))
+                .catch((error) => console.log('Service Worker registration failed', error));
+        }
+    </script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Updated CDN -->
+    <script>
+        // JavaScript to handle the navigator icon click functionality
+        function redirectToFeed() {
+            window.location.href = 'consumer-feed.html'; // Adjust to the correct path for the feed page
+        }
+
+        function redirectToSearch() {
+            window.location.href = 'consumer-search.html'; // Adjust to the correct path for the search page
+        }
+
+        function redirectToCreate() {
+            window.location.href = 'consumer-create.html'; // Adjust to the correct path for the create page
+        }
+
+        function redirectToMessages() {
+            window.location.href = 'consumer-messages.html'; // Adjust to the correct path for the messages page
+        }
+
+        function redirectToProfile() {
+            window.location.href = 'consumer-profile.html'; // Adjust to the correct path for the profile page
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Logo and Name -->
+    <header>
+        <img src="images/logo.png" alt="Farm Talk Logo" class="logo">
+        <h1>Farm Talk</h1>
+    </header>
+
+    <!-- Navigator Tab -->
+    <nav>
+        <ul>
+            <li><a href="javascript:void(0)" onclick="redirectToFeed()"><i class="fas fa-home"></i> Feed/Home</a></li>
+            <li><a href="javascript:void(0)" onclick="redirectToSearch()"><i class="fas fa-search"></i> Search</a></li>
+            <li><a href="javascript:void(0)" onclick="redirectToCreate()"><i class="fas fa-plus-circle"></i> Create</a></li>
+            <li><a href="javascript:void(0)" onclick="redirectToMessages()"><i class="fas fa-comments"></i> Messages</a></li>
+            <li><a href="javascript:void(0)" onclick="redirectToProfile()"><i class="fas fa-user"></i> Profile</a></li>
+        </ul>
+    </nav>
+
+       <!-- Feed Content -->
+       <main class="feed">
+        <!-- Produce Listing 1 -->
+        <section class="feed-item">
+            <h2>Organic Dairy Products</h2>
+            <img src="images/dairy.jpg" alt="Dairy Products">
+            <p>Fresh, high-quality milk, cheese, and yogurt from grass-fed cows. Sustainably produced with no artificial additives—pure, natural, and delicious.</p>
+            <button class="buy-btn">Shop Now</button>
+        </section>
+
+        <!-- Produce Listing 2 -->
+        <section class="feed-item">
+            <h2>Fresh Lettuce Bunches</h2>
+            <img src="images/letuce.jpg" alt="Lettuce">
+            <p>Handpicked fresh lettuce, perfect for your salads. Available for local pickup only.</p>
+            <p><strong>Price:</strong> $2 per bunch</p>
+            <button class="buy-btn">Buy Now</button>
+        </section>
+
+        <!-- Farm Life Update -->
+        <section class="feed-item">
+            <h2>Update from Greenfield Farms</h2>
+            <img src="images/carrot.webp" alt="Farm Life">
+            <p>We’ve just planted a new crop of organic carrots. Stay tuned for updates on our farm activities!</p>
+            <button class="buy-btn">Stay Updated</button>
+        </section>
+
+        <!-- Farm Life Update 2 -->
+        <section class="feed-item">
+            <h2>Upcoming Seasonal Market</h2>
+            <p>Join us at the local farmers' market next weekend! We’ll have fresh produce and handcrafted goods from our farm.</p>
+            <button class="more-btn">Learn More</button>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Farm Talk. All rights reserved.</p>
+    </footer>
+</body>
+</html>

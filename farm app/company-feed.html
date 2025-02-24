@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="images/logoico.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Talk - Feed</title>
+    <link rel="stylesheet" href="feed.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="manifest" href="manifest.json">
+    
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then((registration) => console.log('Service Worker registered', registration))
+                .catch((error) => console.log('Service Worker registration failed', error));
+        }
+    </script>  
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Updated CDN -->
+    <script>
+        // JavaScript to handle the navigator icon click functionality
+        function redirectToFeed() {
+            window.location.href = 'company-feed.html'; // Adjust to the correct path for the feed page
+        }
+
+        function redirectToSearch() {
+            window.location.href = 'company-search.html'; // Adjust to the correct path for the search page
+        }
+
+        function redirectToCreate() {
+            window.location.href = 'company-create.html'; // Adjust to the correct path for the create page
+        }
+
+        function redirectToMessages() {
+            window.location.href = 'company-messages.html'; // Adjust to the correct path for the messages page
+        }
+
+        function redirectToProfile() {
+            window.location.href = 'company-profile.html'; // Adjust to the correct path for the profile page
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Logo and Name -->
+    <header>
+        <img src="images/logo.png" alt="Farm Talk Logo" class="logo">
+        <h1>Farm Talk</h1>
+    </header>
+
+    <!-- Navigator Tab -->
+    <nav>
+        <ul>
+            <li><a href="javascript:void(0)" onclick="redirectToFeed()"><i class="fas fa-home"></i> Feed/Home</a></li>
+            <li><a href="javascript:void(0)" onclick="redirectToSearch()"><i class="fas fa-search"></i> Search</a></li>
+            <li><a href="javascript:void(0)" onclick="redirectToCreate()"><i class="fas fa-plus-circle"></i> Create</a></li>
+            <li><a href="javascript:void(0)" onclick="redirectToMessages()"><i class="fas fa-comments"></i> Messages</a></li>
+            <li><a href="javascript:void(0)" onclick="redirectToProfile()"><i class="fas fa-user"></i> Profile</a></li>
+        </ul>
+    </nav>
+
+    <!-- Feed Content -->
+    <main class="feed">
+        <!-- High-Quality Products for Sale -->
+        <section class="feed-item">
+            <h2>Organic Wheat for Sale</h2>
+            <img src="images/wheat.jpg" alt="Organic Wheat">
+            <p>High-quality organic wheat, directly sourced from local farmers. Perfect for your business or retail needs. Bulk orders available.</p>
+            <p><strong>Price:</strong> $1.50 per lb</p>
+            <button class="contact-btn">Contact Supplier</button>
+        </section>
+
+        <!-- Collaboration Opportunity -->
+        <section class="feed-item">
+            <h2>Collaboration: Sustainable Farming Practices</h2>
+            <img src="images/collaboration.webp" alt="Sustainable Farming">
+            <p>We are looking for partners to help implement sustainable farming practices. Collaborate with local farmers to promote organic and eco-friendly farming.</p>
+            <button class="contact-btn">Contact for Collaboration</button>
+        </section>
+
+        <!-- Resource Sharing Opportunity -->
+        <section class="feed-item">
+            <h2>Support for Small-Scale Farmers</h2>
+            <img src="images/small-farmers.jpg" alt="Support for Farmers">
+            <p>We provide funding and resources to small-scale farmers to help them expand and improve their production. Join us in supporting the future of farming!</p>
+            <button class="contact-btn">Get Involved</button>
+        </section>
+
+        <!-- Sourcing Opportunity -->
+        <section class="feed-item">
+            <h2>Sourcing Fresh Produce</h2>
+            <img src="images/fruit.webp" alt="Fresh Produce">
+            <p>We are sourcing fresh produce directly from farmers. Looking for suppliers of high-quality fruits, vegetables, and herbs. Join us to bring farm-fresh products to market.</p>
+            <button class="contact-btn">Become a Supplier</button>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Farm Talk. All rights reserved.</p>
+    </footer>
+</body>
+</html>

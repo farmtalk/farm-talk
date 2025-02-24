@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="images/logoico.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Talk - Consumer Search</title>
+    <link rel="stylesheet" href="search.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merienda&family=EB+Garamond&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="manifest" href="manifest.json">
+        
+        <script>
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then((registration) => console.log('Service Worker registered', registration))
+                    .catch((error) => console.log('Service Worker registration failed', error));
+            }
+        </script>
+   <script>
+        function redirectToFeed() {
+            window.location.href = 'consumer-feed.html';
+        }
+
+        function redirectToSearch() {
+            window.location.href = 'consumer-search.html';
+        }
+
+        function redirectToCreate() {
+            window.location.href = 'consumer-create.html';
+        }
+
+        function redirectToMessages() {
+            window.location.href = 'consumer-messages.html';
+        }
+
+        function redirectToProfile() {
+            window.location.href = 'consumer-profile.html';
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Logo and Name -->
+    <header>
+        <img src="images/logo.png" alt="Farm Talk Logo" class="logo">
+        <h1>Farm Talk</h1>
+    </header>
+
+    <!-- Navigator Tab -->
+    <nav>
+        <ul>
+            <li><a href="javascript:void(0)" onclick="redirectToFeed()"><i class="fas fa-home"></i> Feed/Home</a></li>
+            <li><a href="javascript:void(0)" onclick="redirectToSearch()"><i class="fas fa-search"></i> Search</a></li>
+            <li><a href="javascript:void(0)" onclick="redirectToCreate()"><i class="fas fa-plus-circle"></i> Create</a></li>
+            <li><a href="javascript:void(0)" onclick="redirectToMessages()"><i class="fas fa-comments"></i> Messages</a></li>
+            <li><a href="javascript:void(0)" onclick="redirectToProfile()"><i class="fas fa-user"></i> Profile</a></li>
+        </ul>
+    </nav>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <select class="category-dropdown">
+            <option>All Categories</option>
+            <option>Fresh Produce</option>
+            <option>Dairy & Meat</option>
+            <option>Organic Products</option>
+            <option>Farm Tours</option>
+        </select>
+        <input type="text" id="search" placeholder="Search for fresh produce, organic goods, or farm experiences...">
+        <button class="search-btn">Search</button>
+    </div>
+
+    <!-- Search Results -->
+    <main class="results">
+        <section class="result-item">
+            <img src="images/letuce.jpg" alt="Fresh Vegetables">
+            <h2>Fresh Organic Vegetables</h2>
+            <p>Locally grown vegetables delivered fresh to your doorstep.</p>
+            <button class="view-btn">View Details</button>
+        </section>
+
+        <section class="result-item">
+            <img src="images/dairy.jpg" alt="Organic Dairy">
+            <h2>Organic Dairy Products</h2>
+            <p>Fresh milk, cheese, and yogurt from grass-fed cows.</p>
+            <button class="view-btn">Learn More</button>
+        </section>
+
+        <section class="result-item">
+            <img src="images/farmers market.jpg" alt="Farm Tour">
+            <h2>Upcoming Seasonal Market</h2>
+            <p>Stop by next weekend for fresh produce and handcrafted goods.</p>
+            <button class="view-btn">Learn More</button>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Farm Talk. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

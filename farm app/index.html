@@ -1,0 +1,76 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <link rel="icon" href="images/logoico.ico" type="image/x-icon">
+        <meta charset="UTF-8">
+        <title>Farm Talk - Welcome</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="manifest" href="manifest.json">
+        
+        <script>
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then((registration) => console.log('Service Worker registered', registration))
+                    .catch((error) => console.log('Service Worker registration failed', error));
+            }
+        </script>
+        
+    </head>
+<body>
+    <div class="welcome-container">
+        <!-- Banner Section -->
+        <header class="banner">
+            <img src="images/banner.png" alt="Farm Talk Banner" class="banner-image">
+            <div class="banner-text">
+                <h1>Farm Talk</h1>
+                <p>Connecting for a Sustainable Future</p>
+            </div>
+        </header>
+
+        <!-- Logo Section -->
+        <div class="logo-section">
+            <img src="images/logo.png" alt="Farm Talk Logo" class="logo">
+        </div>
+
+        <!-- What is Farm Talk Section -->
+        <section class="introduction">
+            <h2>What is Farm Talk?</h2>
+            <p>
+                Farm Talk is an online platform that connects farmers, companies, and consumers in one seamless marketplace. 
+                Our goal is to make it easier for farmers to sell their crops, for companies to source fresh produce, 
+                and for consumers to buy directly from local growers. We aim to create a community that supports sustainable 
+                agriculture and boosts local economies.
+            </p>
+        </section>
+
+        <!-- Roles Section -->
+<section class="roles-section">
+    <div class="role">
+        <img src="images/farmer.png" alt="Farmer" class="role-image">
+        <h3>Farmer</h3>
+        <p>As a farmer, you can showcase your fresh produce by creating detailed listings with descriptions, photos, and prices, attracting more customers. Build trust by engaging with buyers, answering questions, and sharing information about your farming practices. Collaborate with other farmers to share tips, ideas, and resources, helping to grow your business.</p>
+    </div>
+    <div class="role">
+        <img src="images/company.png" alt="Sustainable Company" class="role-image">
+        <h3>Company</h3>
+        <p>As a partner, you can work directly with farmers to promote sustainable farming practices and environmentally friendly methods. You’ll provide resources such as tools, training, and advice to help improve farming techniques. Supporting local farmers strengthens the agricultural community and ensures a steady supply of fresh produce.</p>
+    </div>
+    <div class="role">
+        <img src="images/consumer.png" alt="Consumer" class="role-image">
+        <h3>Consumer</h3>
+        <p>Farm Talk connects you directly with farmers, offering fresh, high-quality produce without middlemen. You can ask questions about the products and support local farming, helping sustain the community and promote sustainable agriculture. Sign up today to start shopping and engage with farmers for the best produce..</p>
+    </div>
+</section>
+
+
+        <!-- Sign-Up Button -->
+        <div class="signup-section">
+            <a href="signup.html"><button class="signup-btn">Sign Up</button></a>
+            <span class="signup-text">Join now for an easy farming experience!</span>
+        </div>
+    </div>
+</body>
+</html>

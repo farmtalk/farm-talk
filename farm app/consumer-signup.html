@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="images/logoico.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumer Sign-Up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="consumer-signup.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="manifest" href="manifest.json">
+        
+        <script>
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then((registration) => console.log('Service Worker registered', registration))
+                    .catch((error) => console.log('Service Worker registration failed', error));
+            }
+        </script>
+   <script>
+        // JavaScript to handle form submission and redirection
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent form from refreshing the page
+            // After form submission, redirect to the feed page
+            window.location.href = 'consumer-feed.html'; // Update with the correct path to your feed page
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Farmer Banner Section -->
+    <div class="banner">
+        <div class="banner-text">
+            <h1>Consumer Sign-Up</h1>
+            <p>Discover fresh produce from local farmers and purchase agricultural products with ease.</p>
+        </div>
+    </div>
+
+    <!-- Form Container -->
+    <div class="form-container">
+        <form onsubmit="handleSubmit(event)">
+            <!-- Types of Products Interested in -->
+            <div class="form-container">
+                <label for="sell-type">Types of products interested in?<span class="mandatory">*</span></label>
+                <div class="multiple-choice">
+                    <label class="choice">
+                        <input type="checkbox" name="sell-type" value="fruit"> <span class="checkmark"></span>
+                        <span class="choice-text">Fruit</span>
+                    </label>
+                    <label class="choice">
+                        <input type="checkbox" name="sell-type" value="vegetables"> <span class="checkmark"></span>
+                        <span class="choice-text">Vegetables</span>
+                    </label>
+                    <label class="choice">
+                        <input type="checkbox" name="sell-type" value="flowers"> <span class="checkmark"></span>
+                        <span class="choice-text">Flowers and Plants</span>
+                    </label>
+                    <label class="choice">
+                        <input type="checkbox" name="sell-type" value="crops"> <span class="checkmark"></span>
+                        <span class="choice-text">Crops and Grains</span>
+                    </label>
+                    <label class="choice">
+                        <input type="checkbox" name="sell-type" value="dairy"> <span class="checkmark"></span>
+                        <span class="choice-text">Dairy</span>
+                    </label>
+                    <label class="choice">
+                        <input type="checkbox" name="sell-type" value="seeds"> <span class="checkmark"></span>
+                        <span class="choice-text">Seeds</span>
+                    </label>
+                    <label class="choice">
+                        <input type="checkbox" name="sell-type" value="herbs"> <span class="checkmark"></span>
+                        <span class="choice-text">Herbs and Spices</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Payment Methods -->
+            <div class="form-container">
+                <label for="payment">Payment Methods<span class="mandatory">*</span></label>
+                <div class="multiple-choice">
+                    <label class="choice">
+                        <input type="checkbox" name="payment" value="credit-debit-card"> <span class="checkmark"></span>
+                        <span class="choice-text">Credit/Debit Card</span>
+                    </label>
+                    <label class="choice">
+                        <input type="checkbox" name="payment" value="bank-transfer"> <span class="checkmark"></span>
+                        <span class="choice-text">Bank Transfer</span>
+                    </label>
+                    <label class="choice">
+                        <input type="checkbox" name="payment" value="mobile-payment"> <span class="checkmark"></span>
+                        <span class="choice-text">Mobile Payment (Apple Pay, Google Pay)</span>
+                    </label>
+                    <label class="choice">
+                        <input type="checkbox" name="payment" value="digital-wallet"> <span class="checkmark"></span>
+                        <span class="choice-text">Digital Wallet (PayPal, Venmo)</span>
+                    </label>
+                    <label class="choice">
+                        <input type="checkbox" name="payment" value="cash-on-delivery"> <span class="checkmark"></span>
+                        <span class="choice-text">Cash on Delivery</span>
+                    </label>
+                    <label class="choice">
+                        <input type="checkbox" name="payment" value="cash-on-pickup"> <span class="checkmark"></span>
+                        <span class="choice-text">Cash on Pick-up</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Notifications -->
+            <div class="form-group">
+                <label>Would you like to receive notifications about seasonal products and discounts? <span class="mandatory">*</span></label>
+                <div class="button-group">
+                    <button type="button" class="choice-btn" onclick="selectOption('yes')">Yes</button>
+                    <button type="button" class="choice-btn" onclick="selectOption('no')">No</button>
+                </div>
+                <input type="hidden" id="notifications" name="notifications">
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Sign Up</button>
+        </form>
+    </div>
+</body>
+</html>

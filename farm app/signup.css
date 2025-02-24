@@ -1,0 +1,133 @@
+/* Global Styles */
+body {
+    font-family: 'Quicksand', sans-serif; /* Warm, friendly font */
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #d4d7c9, #738859); /* Earthy gradient */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* Sign-Up Container */
+.signup-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Slight transparency to let the background peek through */
+    border-radius: 15px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #3e4e2b; /* Dark earthy text color */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Heading */
+h1 {
+    font-family: 'Playfair Display', serif; /* Fancy font */
+    font-size: 2.5rem;
+    color: #6c4f1a; /* Warm, earthy brown */
+    margin-bottom: 15px;
+}
+
+/* Intro Text */
+.intro-text {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #3e4e2b;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+/* Form Fields */
+.form-group {
+    margin-bottom: 25px;
+    text-align: left;
+    width: 100%;
+}
+
+/* Label */
+label {
+    display: block;
+    font-size: 1.1rem; /* Slightly larger size for better emphasis */
+    font-weight: 600; /* Make the font bold */
+    color: #6c4f1a; /* Warm brown color for labels */
+    margin-bottom: 10px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Input & Select Fields */
+input, select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid #8f9b58; /* Earthy green border */
+    background-color: #f2f2f2;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Focused Input & Select Fields */
+input:focus, select:focus {
+    border-color: #8b795b; /* Darker brown/green border on focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(139, 121, 91, 0.5); /* Slight shadow for focus effect */
+}
+
+/* Role Select Dropdown */
+select {
+    font-family: 'Playfair Display', serif; /* Fancy font for the dropdown */
+    color: #6c4f1a; /* Warm brown color for text */
+}
+
+/* Mandatory Field Indicator */
+.mandatory {
+    color: #d32f2f; /* Red for mandatory fields */
+}
+
+/* Submit Button */
+.submit-btn {
+    background-color: #8f9b58; /* Earthy green for button */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-family: 'Quicksand', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #6d7a47; /* Slightly darker green on hover */
+}
+
+/* Make Form Take Whole Width */
+.signup-container {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Adding space between sections */
+form {
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Dropdown Options */
+select option {
+    background-color: #f2f2f2;
+    color: #6c4f1a; /* Match the warm brown text */
+}
+
+/* Hover Effect for Options */
+select:hover {
+    border-color: #6d7a47; /* Slightly darker green border on hover */
+}

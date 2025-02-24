@@ -1,0 +1,266 @@
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: 'Merienda', sans-serif;
+    background-color: #f9f8f2;
+    color: #3b3b3b;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Logo and header */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    color: #3b3b3b;
+    margin-top: 10px;
+}
+
+header .logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+/* Navigator Tab */
+nav {
+    background-color: #658354;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 5px 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #b8d9ab;
+}
+
+/* Responsive Navigation */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+}
+
+/* Profile Page Styling */
+.profile-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center the profile container */
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center profile picture and text */
+    margin-bottom: 30px;
+    margin-top: 50px;
+    flex-direction: column; /* Stack items vertically for mobile view */
+}
+
+.profile-pic {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center image */
+    margin-bottom: 20px;
+}
+
+.profile-pic img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 35px;
+    margin-left: 20px;
+}
+
+.profile-info {
+    text-align: center;
+}
+
+.profile-info h2 {
+    font-size: 28px;
+    color: #3b3b3b;
+}
+
+.profile-info p {
+    font-size: 18px;
+    color: #555;
+}
+
+.profile-info .bio {
+    font-size: 16px;
+    color: #888;
+    margin-top: 10px;
+}
+
+.edit-profile-btn {
+    background-color: #658354;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 20px; /* Added space above the button */
+}
+
+.edit-profile-btn:hover {
+    background-color: #506e3b;
+}
+
+/* Profile Edit Dropdown */
+.profile-edit {
+    margin-top: 30px;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.profile-edit .dropdown-content {
+    display: block;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #658354;
+}
+
+form button {
+    background-color: #658354;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #506e3b;
+}
+
+/* Posts and Saved */
+.posts-container {
+    margin-top: 40px;
+}
+
+.posts, .saved {
+    margin-bottom: 20px;
+}
+
+.posts h3, .saved h3 {
+    font-size: 22px;
+    color: #3b3b3b;
+}
+
+.no-posts, .no-saved {
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 14px;
+    color: #888;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column; /* Stack the profile picture and info vertically */
+        align-items: center;
+    }
+
+    .profile-pic {
+        margin-bottom: 20px; /* Add space between image and text */
+    }
+
+    .profile-info {
+        text-align: center;
+    }
+
+    .edit-profile-btn {
+        margin-top: 20px; /* Add space between text and button */
+    }
+
+    .profile-container {
+        padding: 20px; /* Add padding for smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .profile-container {
+        padding: 15px; /* Reduce padding for small mobile screens */
+    }
+
+    .profile-info h2 {
+        font-size: 24px; /* Reduce heading size on small screens */
+    }
+
+    .profile-info p {
+        font-size: 16px; /* Reduce text size */
+    }
+
+    .profile-info .bio {
+        font-size: 14px; /* Smaller bio font */
+    }
+
+    .edit-profile-btn {
+        width: 100%; /* Make the button take full width */
+        margin-top: 20px;
+    }
+}

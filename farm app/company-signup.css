@@ -1,0 +1,182 @@
+/* Global Styles */
+body {
+    font-family: 'Merienda', cursive;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #f7f2e7, #dbe6ce);
+    color: #4c3f26;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+    width: 100%;
+}
+
+/* Banner Styles */
+.banner {
+    width: 100vw;
+    height: 300px;
+    background-image: url('images/3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-bottom: 1px; /* Space between banner and the first question */
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.banner h1 {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner p {
+    font-size: 1.2rem;
+    margin-top: 1px;
+}
+
+/* Form Container Styles */
+.form-container {
+    padding: 20px 30px;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto 0;  /* Ensure the form is centered with some space at the top */
+    text-align: left;
+    margin-bottom: 30px; /* Add space below each form section (adjust this value as needed) */
+}
+
+/* Form Fields */
+.form-group {
+    margin-top: 20px; /* Space between form groups */
+    margin-bottom: 100px; /* Increased gap between questions */
+}
+
+label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #6c4f1a;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Select Fields */
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Input Fields */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Checkbox & Radio Groups */
+.checkbox-group label,
+.radio-group label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Customizable spacing */
+    font-size: 1rem;
+    color: #4c3f26;
+    cursor: pointer;
+}
+
+.checkbox-group input,
+.radio-group input {
+    margin-right: 10px;
+    accent-color: #7a6a56; /* Styled to match the theme */
+    width: 18px;
+    height: 18px;
+}
+
+/* Style for Yes/No Buttons in button-group (like Sign-Up Button) */
+.button-group {
+    display: flex; /* Use flexbox to arrange buttons */
+    justify-content: center; /* Center buttons horizontally */
+    align-items: center; /* Center buttons vertically */
+    gap: 20px; /* Adjust space between Yes/No buttons */
+    margin-top: 50px; /* Space between question and buttons */
+    margin-bottom: 10px; /* Space between buttons and the next question */
+}
+
+.button-group button {
+    padding: 16px 30px; /* Smaller size */
+    border: 2px solid #7a6a56; /* Same color as sign-up button */
+    background-color: #7a6a56; /* Same background color */
+    color: white; /* White text */
+    font-size: 1rem; /* Slightly smaller font size */
+    border-radius: 6px; /* Same border radius */
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.button-group button:hover {
+    background-color: #5c5c37; /* Darker earthy tone for hover effect */
+    border-color: #4c3f26; /* Darker border on hover */
+}
+
+.button-group button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(122, 106, 86, 0.5);
+}
+
+/* Submit Button */
+.submit-btn {
+    background-color: #7a6a56;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 400px; /* Set the width to a smaller value */
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block; /* Ensure it’s centered */
+}
+
+.submit-btn:hover {
+    background-color: #4c3f26;
+}
+
+/* Mandatory Field Indicator */
+.mandatory {
+    color: #e74c3c;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .banner h1 {
+        font-size: 2.5rem;
+    }
+
+    .banner p {
+        font-size: 1rem;
+    }
+
+    .form-container {
+        padding: 15px;
+    }
+}
